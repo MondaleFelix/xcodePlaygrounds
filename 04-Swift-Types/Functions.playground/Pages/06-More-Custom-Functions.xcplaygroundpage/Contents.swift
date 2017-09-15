@@ -55,9 +55,24 @@ func drawTriangle(){
 
 }
 
-drawTriangle()
+
+func drawPentagon(){
+    rotate(degrees: 60)
+    move(steps: 50)
+    rotate(degrees: 60)
+    move(steps: 50)
+    rotate(degrees: 60)
+    move(steps: 50)
+    rotate(degrees: 60)
+    move(steps: 50)
+    rotate(degrees: 60)
+    move(steps: 50)
+    rotate(degrees: 60)
+    move(steps: 50)
+}
 //: [Previous](@previous) | [Next](@next)
 
+drawPentagon()
 
 
 
