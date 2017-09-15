@@ -70,12 +70,22 @@ func drawHexagon(){
     rotate(degrees: 60)
     move(steps: 50)
 }
+
+
 //: [Previous](@previous) | [Next](@next)
+func drawPentagon(){
+    move(steps: 50)
+    rotate(degrees: 72)
+    move(steps: 50)
+    rotate(degrees: 72)
+    move(steps: 50)
+    rotate(degrees: 72)
+    move(steps: 50)
+    rotate(degrees: 72)
+    move(steps: 50)
+}
 
-drawHexagon()
-
-
-
+drawPentagon()
 
 
 
