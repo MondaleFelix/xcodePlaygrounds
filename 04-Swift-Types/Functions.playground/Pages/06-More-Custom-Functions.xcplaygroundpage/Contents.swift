@@ -18,8 +18,6 @@
 
 */
 
-
-
 /*:
 
  ## Recap
@@ -47,15 +45,17 @@
  
  
 */
+func drawTriangle(){
+    rotate(degrees: 60)
+    move(steps: 100)
+    rotate(degrees: 120)
+    move(steps: 100)
+    rotate(degrees: 120)
+    move(steps: 100)
 
-func drawTriangle(steps: Int, degrees: Int){
-    move(steps: <#T##Int#>)
-    
 }
 
-
-
-
+drawTriangle()
 //: [Previous](@previous) | [Next](@next)
 
 

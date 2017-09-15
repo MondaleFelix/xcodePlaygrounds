@@ -25,7 +25,13 @@
  - callout(Challenge): Now that you're pretty sure you have some working pseudocode, it's time to put it to the test... Try out the procedure you created in the space below. Remember, this is real coding again -- syntax matters! Each function call should be on a separate line and don't forget the parentheses.
 
  */
-
+moveFifty()
+rotateNinety()
+moveFifty()
+rotateNinety()
+moveFifty()
+rotateNinety()
+moveFifty()
 
 
 

@@ -13,9 +13,21 @@
 
  */
 
+func drawBigSqaure(){
+    moveFifty()
+    moveFifty()
+    rotateNinety()
+    moveFifty()
+    moveFifty()
+    rotateNinety()
+    moveFifty()
+    moveFifty()
+    rotateNinety()
+    moveFifty()
+    moveFifty()
+}
 
-
-
+drawBigSqaure()
 
 
 

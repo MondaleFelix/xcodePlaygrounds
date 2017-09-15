@@ -119,3 +119,7 @@ func getWeekdayName(day: Weekday) -> String {
 var weekday1 = getWeekdayName(day: .Monday)
 
 print(weekday1)
+
+
+func isItFinallyWeekend(day: Weekday){
+}

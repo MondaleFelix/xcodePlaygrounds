@@ -22,9 +22,18 @@
  - callout(Challenge): Try defining your own `drawSquare` function below. Use the sample function above as a reference but make sure to change the name! You should be able to copy your square drawing code from the previous page and paste it inside of the function body.
 
  */
+func drawSqaure(){
+    moveFifty()
+    rotateNinety()
+    moveFifty()
+    rotateNinety()
+    moveFifty()
+    rotateNinety()
+    moveFifty()
 
+}
 
-
+drawSqaure()
 /*:
 
  ## Did it work?
