@@ -82,8 +82,22 @@ func drawTriangle(sideLength: Int){
     move(steps: sideLength)
 }
 
-drawTriangle(sideLength: 100)
+// drawTriangle(sideLength: 100)
 
+
+func drawPentagon(sideLength : Int){
+    move(steps: sideLength)
+    rotate(degrees: 72)
+    move(steps: sideLength)
+    rotate(degrees: 72)
+    move(steps: sideLength)
+    rotate(degrees: 72)
+    move(steps: sideLength)
+    rotate(degrees: 72)
+    move(steps: sideLength)
+}
+
+drawPentagon(sideLength: 100)
 
 
 
