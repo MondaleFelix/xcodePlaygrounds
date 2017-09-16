@@ -56,8 +56,16 @@
  */
 
 func drawSquare(sideLength: Int) {
-
+    move(steps: sideLength)
+    rotate(degrees: 90)
+    move(steps: sideLength)
+    rotate(degrees: 90)
+    move(steps: sideLength)
+    rotate(degrees: 90)
+    move(steps: sideLength)
 }
+
+drawSquare(sideLength: 100)
 
 /*:
 
