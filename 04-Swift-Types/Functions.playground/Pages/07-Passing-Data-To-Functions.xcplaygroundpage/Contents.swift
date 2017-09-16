@@ -65,7 +65,7 @@ func drawSquare(sideLength: Int) {
     move(steps: sideLength)
 }
 
-drawSquare(sideLength: 100)
+ // drawSquare(sideLength: 100)
 
 /*:
 
@@ -74,7 +74,15 @@ drawSquare(sideLength: 100)
  - callout(Challenge): Once you have the resizable `drawSquare` function working, do the same for `drawTriangle`, `drawPentagon`, and `drawHexagon` below.
 
  */
+func drawTriangle(sideLength: Int){
+    move(steps: sideLength)
+    rotate(degrees: 120)
+    move(steps: sideLength)
+    rotate(degrees: 120)
+    move(steps: sideLength)
+}
 
+drawTriangle(sideLength: 100)
 
 
 
