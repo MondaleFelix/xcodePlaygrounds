@@ -52,9 +52,16 @@ func drawTriangle(sideLength: Int){
     }
 }
 
-drawTriangle(sideLength: 50)
+//drawTriangle(sideLength: 50)
 
+func drawSqaure(sideLength: Int){
+    for i in 1...4 {
+        move(steps: sideLength)
+        rotate(degrees: 90)
+    }
+}
 
+drawSqaure(sideLength: 100)
 /*:
 
  - callout(Hint): Your triangle `drawTriangle` function should use `1...3` in the _for-loop_ syntax above. Your `drawSquare` function should use `1...4`
