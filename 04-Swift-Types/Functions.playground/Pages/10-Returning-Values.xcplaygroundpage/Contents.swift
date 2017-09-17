@@ -52,15 +52,18 @@ let twoPiRadiansInDegrees = radiansToDegrees(radians: 2 * Double.pi)
  - note: You can convert from degrees to radians by inverting the math in the above function. Divide by `180` and multiply by `Double.pi` (π).
 
  */
+func degreesToRadians(degrees: Double) -> Double {
+    return degrees / 180 * Double.pi
+}
 
 
 
 
 
+let halfPi = degreesToRadians(degrees: halfPiRadiansInDegrees)
+let pi = degreesToRadians(degrees: piRadiansInDegrees)
+let twoPi = degreesToRadians(degrees: twoPiRadiansInDegrees)
 
-//let halfPi = degreesToRadians(degrees: halfPiRadiansInDegrees)
-//let pi = degreesToRadians(degrees: piRadiansInDegrees)
-//let twoPi = degreesToRadians(degrees: twoPiRadiansInDegrees)
 
 /*:
 
@@ -71,7 +74,6 @@ let twoPiRadiansInDegrees = radiansToDegrees(radians: 2 * Double.pi)
  - callout(Challenge): Write a `calculateRotationForPolygon` function below that takes one parameter called `sides` of type `Int` and returns a `Double`. Copy your old `drawPolygon` function over and use `calculateRotationForPolygon`.
 
  */
-
 
 
 

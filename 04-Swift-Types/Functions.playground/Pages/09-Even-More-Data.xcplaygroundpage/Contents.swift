@@ -47,9 +47,14 @@
  - callout(Challenge): Test your `drawPolygon` function below and make sure it works!
 
  */
+func drawPolygon(sideLength: Int, numberOfSides: Int){
+    for i in 1...numberOfSides{
+        move(steps: sideLength)
+        rotate(degrees: 360/numberOfSides)
+    }
+}
 
-
-
+drawPolygon(sideLength: 100, numberOfSides: 4)
 
 
 /*:
