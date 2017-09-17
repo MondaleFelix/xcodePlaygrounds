@@ -97,7 +97,23 @@ func drawPentagon(sideLength : Int){
     move(steps: sideLength)
 }
 
-drawPentagon(sideLength: 100)
+// drawPentagon(sideLength: 100)
+
+func drawHexagon(sideLength: Int){
+    move(steps: sideLength)
+    rotate(degrees: 60)
+    move(steps: sideLength)
+    rotate(degrees: 60)
+    move(steps: sideLength)
+    rotate(degrees: 60)
+    move(steps: sideLength)
+    rotate(degrees: 60)
+    move(steps: sideLength)
+    rotate(degrees: 60)
+    move(steps: sideLength)
+}
+
+drawHexagon(sideLength: 50)
 
 
 
