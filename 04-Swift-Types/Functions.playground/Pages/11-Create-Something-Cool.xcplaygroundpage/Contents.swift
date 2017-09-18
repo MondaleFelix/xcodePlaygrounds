@@ -41,7 +41,10 @@
  - callout(Challenge): Draw something awesome in the space below!
  
  */
-
+for i in 1...1000{
+    move(steps: 1)
+    rotate(degrees: 1)
+}
 
 
 
@@ -129,7 +132,7 @@
 
 
 //: This is setup code to make the live visualization work!
-Pen.delay = 0.1
+Pen.delay = 0
 import PlaygroundSupport
 import Foundation
 let results = DrawingScene.setup()

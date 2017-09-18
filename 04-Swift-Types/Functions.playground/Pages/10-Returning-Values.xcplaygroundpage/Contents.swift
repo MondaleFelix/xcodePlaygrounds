@@ -74,8 +74,9 @@ let twoPi = degreesToRadians(degrees: twoPiRadiansInDegrees)
  - callout(Challenge): Write a `calculateRotationForPolygon` function below that takes one parameter called `sides` of type `Int` and returns a `Double`. Copy your old `drawPolygon` function over and use `calculateRotationForPolygon`.
 
  */
-
-
+func calculateRotationForPolygon(sides: Int) -> Double {
+    
+}
 
 
 
