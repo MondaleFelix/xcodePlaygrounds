@@ -12,7 +12,7 @@ import Foundation
  requirements of a protocol is said to conform to that protocol.
 
  
- ## Defining and conforming to a Protocol
+ ## Defining and conforming to a Protocold
  
 */
 
@@ -231,8 +231,20 @@ describe(item: Ostrich())
  What makes them equal? Is it their colors? Their sizes? Its up to you to determine that.
  
  */
+protocol Car{
+    var maxSpeed: Int  { get set }
+    var numberOfWheels: Int {get set }
+    var doors: Int { get set }
+    var modelProperties: String { get set }
+}
 
-// Used by Artist to determine style of Artist
+class Vehicle: Car{
+    
+}
+
+
+
+// Used by Artist to determine style of Artist  
 enum Style: String {
     case impressionism
     case surrealism

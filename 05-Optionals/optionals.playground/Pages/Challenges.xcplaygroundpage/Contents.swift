@@ -10,12 +10,41 @@
  
  */
 class Person {
-  let name: String
-  init(name: String) {
-    self.name = name
-  }
+    let name: String
+    init(name: String) {
+        self.name = name
+    }
+}
+func mynameIs(withPerson person: Person?) ->String{
+    
+    let noata = "This is not a valid person object."
+    guard let person = person else {return nodata}
+    let hello = (" hello \(person.name)")
+    
+    return hello
 }
 
+func mynameis2(withPerson person: Person?) -> String{
+    
+    var answer =  ""
+    switch person {
+    case .none: answer = "This is not a valid person object. "
+    case .some:  answer = "hello \(person?.name)"
+    }
+    
+    
+    return answer
+}
+
+
+let maybeperson1 = Person(name: "Mondale")
+let maybeperson2 : Person? = nil
+
+let p1 = mynameIs(withPerson: maybeperson1)
+let p2 = mynameIs(withPerson: maybeperson2)
+
+let p3 = mynameis2(withPerson: maybeperson1)
+let p4 = mynameis2(withPerson: maybeperson2)
 
 
 
