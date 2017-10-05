@@ -15,7 +15,7 @@ class Person {
         self.name = name
     }
 }
-func mynameIs(withPerson person: Person?) ->String{
+func myNameIs(withPerson person: Person?) ->String{
     
     let noPerson = "This is not a valid person object."
     guard let person = person else {return noPerson}
@@ -24,12 +24,12 @@ func mynameIs(withPerson person: Person?) ->String{
     return hello
 }
 
-func mynameis2(withPerson person: Person?) -> String{
+func myNameIs2(withPerson person: Person?) -> String{
     
     var answer =  ""
     switch person {
     case .none: answer = "This is not a valid person object. "
-    case .some:  answer = "hello \(person?.name)"
+    case .some:  answer = "hello \(String(describing: person?.name))"
     }
     
     
@@ -40,11 +40,11 @@ func mynameis2(withPerson person: Person?) -> String{
 let person1 = Person(name: "Mondale")
 let person2 : Person? = nil
 
-let p1 = mynameIs(withPerson: person1)
-let p2 = mynameIs(withPerson: person2)
+let p1 = myNameIs(withPerson: person1)
+let p2 = myNameIs(withPerson: person2)
 
-let p3 = mynameis2(withPerson: person1)
-let p4 = mynameis2(withPerson: person2)
+let p3 = myNameIs2(withPerson: person1)
+let p4 = myNameIs2(withPerson: person2)
 
 
 
