@@ -17,8 +17,8 @@ class Person {
 }
 func mynameIs(withPerson person: Person?) ->String{
     
-    let noata = "This is not a valid person object."
-    guard let person = person else {return nodata}
+    let noPerson = "This is not a valid person object."
+    guard let person = person else {return noPerson}
     let hello = (" hello \(person.name)")
     
     return hello
@@ -37,14 +37,14 @@ func mynameis2(withPerson person: Person?) -> String{
 }
 
 
-let maybeperson1 = Person(name: "Mondale")
-let maybeperson2 : Person? = nil
+let person1 = Person(name: "Mondale")
+let person2 : Person? = nil
 
-let p1 = mynameIs(withPerson: maybeperson1)
-let p2 = mynameIs(withPerson: maybeperson2)
+let p1 = mynameIs(withPerson: person1)
+let p2 = mynameIs(withPerson: person2)
 
-let p3 = mynameis2(withPerson: maybeperson1)
-let p4 = mynameis2(withPerson: maybeperson2)
+let p3 = mynameis2(withPerson: person1)
+let p4 = mynameis2(withPerson: person2)
 
 
 
