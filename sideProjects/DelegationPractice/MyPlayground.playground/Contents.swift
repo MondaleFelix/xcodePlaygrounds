@@ -1,17 +1,34 @@
 protocol SpecialToolBox{
-    func drill()
     func hammer()
+    func drill()
 }
 
 struct Boss{
+    
     var delegate: SpecialToolBox?
+    
+    func saysStartHammering(){
+        delegate?.hammer()
+    }
     
     func saysStartDrilling(){
         delegate?.drill()
     }
+}
+
+struct Worker: SpecialToolBox{
     
-    func saysStartHammering(){
-        
+    func drill() {
+        print("Im drilling man")
     }
     
+    func hammer(){
+        print("Im hammering man")
+    }
 }
+
+let worker = Worker()
+let boss = Boss(delegate:worker)
+
+boss.saysStartDrilling()
+boss.saysStartHammering()
