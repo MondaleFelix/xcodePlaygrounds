@@ -8,22 +8,22 @@ struct Boss{
     var delegate: SpecialToolBox?
     
     func saysStartHammering(){
-        delegate?.hammer()
+        delegate?.drill()
     }
     
     func saysStartDrilling(){
-        delegate?.drill()
+        delegate?.hammer()
     }
 }
 
 struct Worker: SpecialToolBox{
     
-    func drill() {
-        print("Im drilling man")
+    func drill(){
+        print("I am drilling bro")
     }
-    
+
     func hammer(){
-        print("Im hammering man")
+        print("I am hammering man")
     }
 }
 
