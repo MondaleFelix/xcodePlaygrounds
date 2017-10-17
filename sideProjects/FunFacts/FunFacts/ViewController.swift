@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        funFactLabel.text = factProvider.facts[0]
+        funFactLabel.text = factProvider.randomFact()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showFact() {
-        funFactLabel.text = factProvider.facts[1]
+        funFactLabel.text = factProvider.randomFact()
     }
     
 }
