@@ -38,9 +38,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Did you know?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="014-vy-aFU">
-                                <rect key="frame" x="69" y="174" width="118" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="014-vy-aFU">
+                                <rect key="frame" x="20" y="160" width="118" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -50,14 +49,17 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dBx-Ek-Vpm" secondAttribute="trailing" constant="20" id="BaU-LR-oP0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pMR-36-I9N" secondAttribute="trailing" constant="40" id="BeN-ql-0ME"/>
+                            <constraint firstItem="014-vy-aFU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="C1u-gw-GuR"/>
                             <constraint firstItem="dBx-Ek-Vpm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TsA-gl-bUZ"/>
                             <constraint firstItem="pMR-36-I9N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="eK2-zB-7fM"/>
                             <constraint firstItem="dBx-Ek-Vpm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gOs-g3-t6u"/>
+                            <constraint firstItem="014-vy-aFU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="mu0-Bj-GSB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pMR-36-I9N" secondAttribute="bottom" constant="80" id="y8b-up-iGU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="funFactButton" destination="pMR-36-I9N" id="gU9-5m-DQc"/>
                         <outlet property="funFactLabel" destination="dBx-Ek-Vpm" id="8Gz-cZ-YB0"/>
                     </connections>
                 </viewController>

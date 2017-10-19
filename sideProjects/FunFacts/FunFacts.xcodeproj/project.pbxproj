@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99228E321F99327F0091DC5D /* BackgroundColorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99228E311F99327F0091DC5D /* BackgroundColorProvider.swift */; };
 		99A834EE1F952B6900C9EF45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A834ED1F952B6900C9EF45 /* AppDelegate.swift */; };
 		99A834F01F952B6900C9EF45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A834EF1F952B6900C9EF45 /* ViewController.swift */; };
 		99A834F31F952B6900C9EF45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99A834F11F952B6900C9EF45 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		99228E311F99327F0091DC5D /* BackgroundColorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundColorProvider.swift; sourceTree = "<group>"; };
 		99A834EA1F952B6900C9EF45 /* FunFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99A834ED1F952B6900C9EF45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99A834EF1F952B6900C9EF45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				99A834F61F952B6900C9EF45 /* LaunchScreen.storyboard */,
 				99A834F91F952B6900C9EF45 /* Info.plist */,
 				99A834FF1F95CD9900C9EF45 /* FactProvider.swift */,
+				99228E311F99327F0091DC5D /* BackgroundColorProvider.swift */,
 			);
 			path = FunFacts;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			files = (
 				99A834F01F952B6900C9EF45 /* ViewController.swift in Sources */,
 				99A834EE1F952B6900C9EF45 /* AppDelegate.swift in Sources */,
+				99228E321F99327F0091DC5D /* BackgroundColorProvider.swift in Sources */,
 				99A835001F95CD9900C9EF45 /* FactProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
