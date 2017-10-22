@@ -9,11 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    let imageProvider = ImageProvider()
+    
     @IBOutlet weak var nerdImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.nerdImage.image = UIImage(named: "elmer")
+        self.nerdImage.image = UIImage(named: imageProvider.randomImage())
         // Do any additional setup after loading the view, typically from a nib.
     }
 
