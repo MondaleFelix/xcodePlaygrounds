@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     let imageProvider = ImageProvider()
+    var nerds: [String] = []
     
     @IBOutlet weak var nerdImage: UIImageView!
     override func viewDidLoad() {
@@ -24,6 +25,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func newNerd(_ sender: Any) {
+                self.nerdImage.image = UIImage(named: imageProvider.randomImage())
+    }
+    
 }
 

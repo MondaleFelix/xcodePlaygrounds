@@ -13,6 +13,8 @@
 		992982E51F9C6131002F8028 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 992982E41F9C6131002F8028 /* Assets.xcassets */; };
 		992982E81F9C6131002F8028 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992982E61F9C6131002F8028 /* LaunchScreen.storyboard */; };
 		992982F21F9C6A96002F8028 /* imageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992982F11F9C6A96002F8028 /* imageProvider.swift */; };
+		992982F41F9C8982002F8028 /* ChooseNerdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992982F31F9C8982002F8028 /* ChooseNerdViewController.swift */; };
+		99DDBFE21F9C7210003E5CB9 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DDBFE11F9C7210003E5CB9 /* CustomSegue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		992982E71F9C6131002F8028 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		992982E91F9C6131002F8028 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		992982F11F9C6A96002F8028 /* imageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageProvider.swift; sourceTree = "<group>"; };
+		992982F31F9C8982002F8028 /* ChooseNerdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseNerdViewController.swift; sourceTree = "<group>"; };
+		99DDBFE11F9C7210003E5CB9 /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,13 @@
 			children = (
 				992982DD1F9C6131002F8028 /* AppDelegate.swift */,
 				992982DF1F9C6131002F8028 /* ViewController.swift */,
+				992982F31F9C8982002F8028 /* ChooseNerdViewController.swift */,
 				992982E11F9C6131002F8028 /* Main.storyboard */,
 				992982E41F9C6131002F8028 /* Assets.xcassets */,
 				992982E61F9C6131002F8028 /* LaunchScreen.storyboard */,
 				992982E91F9C6131002F8028 /* Info.plist */,
 				992982F11F9C6A96002F8028 /* imageProvider.swift */,
+				99DDBFE11F9C7210003E5CB9 /* CustomSegue.swift */,
 			);
 			path = finalProject;
 			sourceTree = "<group>";
@@ -142,6 +148,8 @@
 				992982F21F9C6A96002F8028 /* imageProvider.swift in Sources */,
 				992982E01F9C6131002F8028 /* ViewController.swift in Sources */,
 				992982DE1F9C6131002F8028 /* AppDelegate.swift in Sources */,
+				99DDBFE21F9C7210003E5CB9 /* CustomSegue.swift in Sources */,
+				992982F41F9C8982002F8028 /* ChooseNerdViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
