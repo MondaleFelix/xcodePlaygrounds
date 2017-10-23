@@ -9,13 +9,11 @@
 
 import UIKit
 
-
-
-protocol NerdDelegate{
-    func didSelectNerd(selectedNerd: String)
-}
-
 class ChooseNerdTableViewController: UIViewController {
+    
+    var nerds: [String] = ImageProvider.images
+    var selectedNerd: String?
+    var delegate: NerdDelegate?
     
     let imageProvider = ImageProvider()
     @IBOutlet weak var nerdTableView: UITableView!
@@ -24,11 +22,6 @@ class ChooseNerdTableViewController: UIViewController {
         nerdTableView.delegate = self
         nerdTableView.dataSource = self
     }
-
-    var nerds: [String] = ImageProvider.images
-    var selectedNerd: String?
-    var delegate: NerdDelegate?
-
     
 }
 extension ChooseNerdTableViewController : UITableViewDelegate
@@ -41,6 +34,7 @@ extension ChooseNerdTableViewController: UITableViewDataSource
      func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
+        
     }
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,7 +56,7 @@ extension ChooseNerdTableViewController: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedNerd = nerds[indexPath.row]
-        delegate?.didSelectNerd(selectedNerd: String)
+        delegate?.didSelectNerd(nerd: selectedNerd)
 //        print(selectedNerd)
         
         self.navigationController?.popViewController(animated: true)

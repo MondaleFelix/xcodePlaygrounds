@@ -8,42 +8,47 @@
 
 import UIKit
 
+protocol NerdDelegate{
+    func didSelectNerd(nerd: String)
+}
+
 class ViewController: UIViewController, NerdDelegate{
     
+    var shownNerd = "variable"
     @IBOutlet weak var resultOfGuess: UILabel!
     let imageProvider = ImageProvider()
-    var nerds: [String] = []
-    
-    static let nerds = [
-        
-        Nerd(name: "Elmer", nerdPicture: UIImage(named: "elmer.jpg")!),
-        Nerd(name: "Mondale", nerdPicture: UIImage(named: "mondale.jpg")!),
-        Nerd(name: "Duncan", nerdPicture: UIImage(named: "duncan.jpg")!),
-        Nerd(name: "Sky", nerdPicture: UIImage(named: "sky.jpg")!)
-    
-    ]
-    
-    
     @IBOutlet weak var nerdImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.nerdImage.image = UIImage(named: imageProvider.randomImage())
-        
+        provideImage()
         resultOfGuess.text = ""
-        print(imageProvider.randomImage())
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
+    func provideImage(){
+        let shownNerd = imageProvider.randomImage()
+        self.nerdImage.image = UIImage(named: shownNerd)
+        print(shownNerd)
+        return self.shownNerd = shownNerd
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     @IBAction func selectNerdPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
-        let chooseNerdVC = storyboard.instantiateViewController(withIdentifier: "ViewController")
+        let chooseNerdVC = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ChooseNerdTableViewController
+        chooseNerdVC.delegate = self
+        
         self.navigationController?.pushViewController(chooseNerdVC, animated: true)
         
     }
+    func didSelectNerd(nerd: String) {
+        print("You selected " + nerd)
+        print("The correct nerd is " + shownNerd)
+    }
+    
     
     @IBAction func newNerd(_ sender: Any) {
                 let randomNerd = imageProvider.randomImage()
@@ -53,8 +58,6 @@ class ViewController: UIViewController, NerdDelegate{
         
     }
     
-    func didSelectNerd(selectedNerd: String) {
-        print("delegate is working")
-    }
+
 }
 

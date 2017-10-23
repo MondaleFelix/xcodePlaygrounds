@@ -99,6 +99,7 @@
                     <connections>
                         <outlet property="nerdImage" destination="qDI-lt-ElY" id="cxx-vR-9Ne"/>
                         <outlet property="resultOfGuess" destination="J47-W0-cVz" id="Rwu-Wb-edA"/>
+                        <segue destination="snN-xP-5mr" kind="show" id="kvL-ZX-c1V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
