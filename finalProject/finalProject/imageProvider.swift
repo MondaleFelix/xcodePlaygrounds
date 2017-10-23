@@ -14,7 +14,8 @@ struct ImageProvider {
         "Mondale",
         "Duncan",
         "Sky",
-        "Kaichi"
+        "Kaichi",
+        "Andrew"
     ]
     
     func randomImage() -> String{
