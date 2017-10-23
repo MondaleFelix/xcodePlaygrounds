@@ -45,17 +45,20 @@ class ViewController: UIViewController, NerdDelegate{
         
     }
     func didSelectNerd(nerd: String) {
+        if nerd == self.shownNerd{
+            resultOfGuess.text = "Correct Nerd!"
+        }
+        else {
+            resultOfGuess.text = "Wrong Nerd!"
+        }
         print("You selected " + nerd)
         print("The correct nerd is " + shownNerd)
     }
     
     
     @IBAction func newNerd(_ sender: Any) {
-                let randomNerd = imageProvider.randomImage()
-                let randomImage = UIImage(named: randomNerd)
-                self.nerdImage.image = randomImage
-                print(randomNerd)
-        
+                provideImage()
+                resultOfGuess.text = ""
     }
     
 
