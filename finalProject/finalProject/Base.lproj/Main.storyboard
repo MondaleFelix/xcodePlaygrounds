@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -64,7 +65,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2D-T2-6rn">
-                                <rect key="frame" x="153" y="601" width="69" height="30"/>
+                                <rect key="frame" x="153" y="607" width="69" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="New Nerd"/>
                                 <connections>
@@ -72,13 +73,20 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vRk-ZM-sk2">
-                                <rect key="frame" x="147" y="550" width="81" height="30"/>
+                                <rect key="frame" x="147" y="554" width="81" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Select Nerd"/>
                                 <connections>
-                                    <segue destination="jR8-HR-83R" kind="show" customClass="SegueFromLeft" customModule="finalProject" customModuleProvider="target" action="showDetailViewController:sender:" id="FdY-Vj-rj8"/>
+                                    <action selector="selectNerdPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XZ9-4f-EJz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J47-W0-cVz">
+                                <rect key="frame" x="166" y="513" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -90,6 +98,7 @@
                     <navigationItem key="navigationItem" id="1J8-ir-dnh"/>
                     <connections>
                         <outlet property="nerdImage" destination="qDI-lt-ElY" id="cxx-vR-9Ne"/>
+                        <outlet property="resultOfGuess" destination="J47-W0-cVz" id="Rwu-Wb-edA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -97,32 +106,64 @@
             <point key="canvasLocation" x="260" y="133.5832083958021"/>
         </scene>
         <!--Choose Nerd Table View Controller-->
-        <scene sceneID="bSR-bJ-NdC">
+        <scene sceneID="YVX-eY-nRY">
             <objects>
-                <tableViewController id="jR8-HR-83R" customClass="ChooseNerdTableViewController" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="uAS-bS-sdD">
+                <viewController storyboardIdentifier="ViewController" id="snN-xP-5mr" customClass="ChooseNerdTableViewController" customModule="finalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o1j-Gf-G4s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UIH-TB-GJW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="nerdCell" rowHeight="100" id="dum-Cc-jB1" customClass="NerdCell" customModule="finalProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dum-Cc-jB1" id="p1R-b4-KFq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVO-4z-gZM">
+                                                    <rect key="frame" x="8" y="39" width="359" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="sVO-4z-gZM" firstAttribute="leading" secondItem="p1R-b4-KFq" secondAttribute="leadingMargin" id="7lI-XU-A8L"/>
+                                                <constraint firstItem="sVO-4z-gZM" firstAttribute="trailing" secondItem="p1R-b4-KFq" secondAttribute="trailingMargin" id="GO9-iO-8mj"/>
+                                                <constraint firstItem="sVO-4z-gZM" firstAttribute="centerY" secondItem="p1R-b4-KFq" secondAttribute="centerY" id="OX6-I5-0dh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="sVO-4z-gZM" id="Kkt-Im-UqX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="snN-xP-5mr" id="QTJ-uv-3Ky"/>
+                                    <outlet property="delegate" destination="snN-xP-5mr" id="pq3-wH-8pA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tL0-tI-kMr">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tL0-tI-kMr" id="Bup-Bz-z85">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="jR8-HR-83R" id="Mbb-Xd-Ceh"/>
-                            <outlet property="delegate" destination="jR8-HR-83R" id="7zY-xn-nqu"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Gi-ZQ-0Dj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="UIH-TB-GJW" firstAttribute="bottom" secondItem="AQM-SH-vgh" secondAttribute="bottom" id="3xS-Ig-Pv3"/>
+                            <constraint firstItem="AQM-SH-vgh" firstAttribute="trailing" secondItem="UIH-TB-GJW" secondAttribute="trailing" id="Wn3-Si-0Ut"/>
+                            <constraint firstItem="UIH-TB-GJW" firstAttribute="top" secondItem="o1j-Gf-G4s" secondAttribute="top" id="cF0-lO-JAH"/>
+                            <constraint firstItem="UIH-TB-GJW" firstAttribute="leading" secondItem="AQM-SH-vgh" secondAttribute="leading" id="pFf-tX-E4z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AQM-SH-vgh"/>
+                    </view>
+                    <connections>
+                        <outlet property="nerdTableView" destination="UIH-TB-GJW" id="TVU-2R-TdG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AZ2-Of-Bhb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1135.2" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1000.8" y="139.880059970015"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SAS-1J-ws4">

@@ -14,7 +14,9 @@
 		992982E81F9C6131002F8028 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 992982E61F9C6131002F8028 /* LaunchScreen.storyboard */; };
 		992982F21F9C6A96002F8028 /* imageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992982F11F9C6A96002F8028 /* imageProvider.swift */; };
 		992982F41F9C8982002F8028 /* ChooseNerdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992982F31F9C8982002F8028 /* ChooseNerdViewController.swift */; };
+		9931F13D1F9DBA3A00BF9027 /* Nerds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9931F13C1F9DBA3A00BF9027 /* Nerds.swift */; };
 		99DDBFE21F9C7210003E5CB9 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DDBFE11F9C7210003E5CB9 /* CustomSegue.swift */; };
+		99DDBFE41F9C8B04003E5CB9 /* NerdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99DDBFE31F9C8B04003E5CB9 /* NerdCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +29,9 @@
 		992982E91F9C6131002F8028 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		992982F11F9C6A96002F8028 /* imageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageProvider.swift; sourceTree = "<group>"; };
 		992982F31F9C8982002F8028 /* ChooseNerdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseNerdViewController.swift; sourceTree = "<group>"; };
+		9931F13C1F9DBA3A00BF9027 /* Nerds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nerds.swift; sourceTree = "<group>"; };
 		99DDBFE11F9C7210003E5CB9 /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
+		99DDBFE31F9C8B04003E5CB9 /* NerdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NerdCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +67,14 @@
 				992982DD1F9C6131002F8028 /* AppDelegate.swift */,
 				992982DF1F9C6131002F8028 /* ViewController.swift */,
 				992982F31F9C8982002F8028 /* ChooseNerdViewController.swift */,
+				99DDBFE31F9C8B04003E5CB9 /* NerdCell.swift */,
 				992982E11F9C6131002F8028 /* Main.storyboard */,
 				992982E41F9C6131002F8028 /* Assets.xcassets */,
 				992982E61F9C6131002F8028 /* LaunchScreen.storyboard */,
 				992982E91F9C6131002F8028 /* Info.plist */,
 				992982F11F9C6A96002F8028 /* imageProvider.swift */,
 				99DDBFE11F9C7210003E5CB9 /* CustomSegue.swift */,
+				9931F13C1F9DBA3A00BF9027 /* Nerds.swift */,
 			);
 			path = finalProject;
 			sourceTree = "<group>";
@@ -145,8 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99DDBFE41F9C8B04003E5CB9 /* NerdCell.swift in Sources */,
 				992982F21F9C6A96002F8028 /* imageProvider.swift in Sources */,
 				992982E01F9C6131002F8028 /* ViewController.swift in Sources */,
+				9931F13D1F9DBA3A00BF9027 /* Nerds.swift in Sources */,
 				992982DE1F9C6131002F8028 /* AppDelegate.swift in Sources */,
 				99DDBFE21F9C7210003E5CB9 /* CustomSegue.swift in Sources */,
 				992982F41F9C8982002F8028 /* ChooseNerdViewController.swift in Sources */,

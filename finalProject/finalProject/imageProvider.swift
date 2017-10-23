@@ -9,15 +9,16 @@
 import GameKit
 
 struct ImageProvider {
-    let images = [
-        "elmer.jpg",
-        "mondale.jpg",
-        "duncan.jpg"
+    static let images = [
+        "Elmer",
+        "Mondale",
+        "Duncan",
+        "Sky"
     ]
     
     func randomImage() -> String{
-        let randomPerson = GKRandomSource.sharedRandom().nextInt(upperBound: images.count)
-        return images[randomPerson]
+        let randomPerson = GKRandomSource.sharedRandom().nextInt(upperBound: ImageProvider.images.count)
+        return ImageProvider.images[randomPerson]
     }
     
 }
