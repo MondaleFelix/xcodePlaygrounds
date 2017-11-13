@@ -10,6 +10,10 @@ import Foundation
 
 class Service
 {
+    let url = URL(string: "https://api.producthunt.com//v1/me/feed")!
+    var urlRequest = URLRequest(url: url)
+    
+    
     static func Networking(url: URL, completion: @escaping ([Post]) -> Void)
     {
         var urlRequest = URLRequest(url: url)

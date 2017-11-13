@@ -17,8 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        let url = URL(string: "https://api.producthunt.com//v1/me/feed")!
-        var urlRequest = URLRequest(url: url)
+        
         urlRequest.allHTTPHeaderFields = ["authorization": "bearer 09cef14346f1665373d53c24b0b2e3d27c13b32ffa14e04bff04f3f2a9affb0b"]
         Service.Networking(url: urlRequest, completion: <#T##([Post]) -> Void#>)
 //        let task = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
